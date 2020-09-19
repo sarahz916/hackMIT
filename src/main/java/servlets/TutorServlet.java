@@ -12,7 +12,7 @@ import org.json.JSONObject;
 /** Servlet that returns comment data */
 @WebServlet("/tutor")
 public class TutorServlet extends HttpServlet {
-  private final String[] TUTOR_FIELDS = {"name", "meeting-medium", "location", "time-zone", "subjects", "num-students", "tutor-rates", "bio"};
+  private final String[] TUTOR_FIELDS = {"name", "email", "meeting-medium", "location", "time-zone", "subjects", "num-students", "tutor-rates", "bio"};
   
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
