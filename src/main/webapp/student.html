@@ -22,39 +22,26 @@
   </div>
     <div id="content" >
     <form action="/student" method="POST">
-      <!-- Student input information:
-      Required:
-      - Name (text box)
-      - meeting medium (checkboxes for virtual and in-person)
-      - Location (text box: have prompt say N/A if you only want virtual learning)
-      - Time Zone (radio buttons?  not comprehensive yet but that's fine)
-      - Subjects for help
-      - number of students willing to work with (check boxes 1-5, 5+)
-      - Upper limit for tutor rates
-
-      Optional:
-      - Bio (set word limit?)
-       -->
 
       <p>Name :</p>
-      <input type="text" id="name" name="name"><br> <br>
+      <input type="text" id="name" name="name" required><br> <br>
 
       <p> Over which mediums would you like to meet? <br>
-      <label for="virtual"><input id="virtual" 
-        type="checkbox" name="meeting-medium" value="virtual">
+      <label for="virtual">
+        <input id="virtual" type="checkbox" name="meeting-medium" value="virtual">
         Virtual</label>
-      <label for="in-person"><input id="in-person" 
-        type="checkbox" name="meeting-medium" value="in-person">
+      <label for="in-person">
+        <input id="in-person" type="checkbox" name="meeting-medium" value="in-person">
         In-person</label>
       </p>
 
       <p>Location :</p>
-      <textarea name="text-input" placeholder="Los Angeles, CA"></textarea>
+      <textarea name="text-input" placeholder="Los Angeles, CA" required></textarea>
       <br/>
 
       <p> Time Zone : <br>
       <label for="HST"><input id="HST" 
-        type="radio" name="time-zone" value="HST">
+        type="radio" name="time-zone" value="HST" required>
         HST</label>
       <label for="AKST"><input id="AKST" 
         type="radio" name="time-zone" value="AKST">
@@ -74,17 +61,58 @@
       </p>
 
       <p>Tutoring Subjects :</p>
-      <textarea name="text-input" placeholder="Calculus, Biology, etc." rows="2" cols="30"></textarea>
+      <textarea name="text-input" placeholder="Calculus, Biology, etc." rows="2" cols="30" required></textarea>
       <br/>
-      <input type="submit" />
+
+      <p> How many students are you willing to work with in group tutoring sessions?  <br> (Select all that apply) <br>
+      <label for="zero"><input id="zero" 
+        type="checkbox" name="num-students" value="zero">
+        0</label>
+      <label for="one"><input id="one" 
+        type="checkbox" name="num-students" value="one">
+        1</label>
+      <label for="two"><input id="two" 
+        type="checkbox" name="num-students" value="two">
+        2</label>
+      <label for="three"><input id="three" 
+        type="checkbox" name="num-students" value="three">
+        3</label>
+      <label for="four"><input id="four" 
+        type="checkbox" name="num-students" value="four">
+        4</label>
+      <label for="five"><input id="five" 
+        type="checkbox" name="num-students" value="five">
+        5</label>
+      <label for="six"><input id="six" 
+        type="checkbox" name="num-students" value="six">
+        6</label>
+      <label for="seven"><input id="seven" 
+        type="checkbox" name="num-students" value="seven">
+        7</label>
+      </p>
+
+      <p> Preferred Tutor Rates: <br>
+      <label for="five-to-fifteen"><input id="five-to-fifteen" 
+        type="checkbox" name="tutor-rates" value="five-to-fifteen">
+        $5-$15/hour </label>
+      <label for="sixteen-to-thirty"><input id="sixteen-to-thirty" 
+        type="checkbox" name="tutor-rates" value="sixteen-to-thirty">
+        $16-$30/hour </label>
+      <label for="thirty-one-to-forty-five"><input id="thirty-one-to-forty-five" 
+        type="checkbox" name="tutor-rates" value="thirty-one-to-forty-five">
+        $31-$45/hour </label>
+      <label for="forty-six-to-sixty"><input id="forty-six-to-sixty" 
+        type="checkbox" name="tutor-rates" value="forty-six-to-sixty">
+        $46-$60/hour </label>
+      </p>
 
       <p>Short Bio :</p>
       <textarea name="text-input" placeholder="I'm looking for a patient tutor that can explain coding to a beginner.  I prefer virtual meetings, but can meet in-person if necessary." rows="4" cols="50"></textarea>
       <br/>
       <input type="submit" />
-
-      
     </form>
+
+
   </div>
   </div>
   </body>
