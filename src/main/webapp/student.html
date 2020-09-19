@@ -3,7 +3,7 @@
 <html>
   <head> <!--TODO: MAKE THIS AN APPEALING FRONT PAGE! -->
     <meta charset="UTF-8">
-    <title></title>
+    <title>Student Sign Up</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -24,7 +24,10 @@
     <form action="/student" method="POST">
 
       <p>Name :</p>
-      <input type="text" id="name" name="name" required><br> <br>
+      <input type="text" id="name" name="name" placeholder="Name" required><br> <br>
+
+      <p>E-mail Address :</p>
+      <input type="text" id="email" name="email" placeholder="myemail@email.com" required><br> <br>
 
       <p> Over which mediums would you like to meet? <br>
       <label for="virtual">
@@ -93,16 +96,16 @@
 
       <p> Preferred Tutor Rates: <br>
       <label for="five-to-fifteen"><input id="five-to-fifteen" 
-        type="checkbox" name="tutor-rates" value="five-to-fifteen">
+        type="radio" name="tutor-rates" value="five-to-fifteen">
         $5-$15/hour </label>
       <label for="sixteen-to-thirty"><input id="sixteen-to-thirty" 
-        type="checkbox" name="tutor-rates" value="sixteen-to-thirty">
+        type="radio" name="tutor-rates" value="sixteen-to-thirty">
         $16-$30/hour </label>
       <label for="thirty-one-to-forty-five"><input id="thirty-one-to-forty-five" 
-        type="checkbox" name="tutor-rates" value="thirty-one-to-forty-five">
+        type="radio" name="tutor-rates" value="thirty-one-to-forty-five">
         $31-$45/hour </label>
       <label for="forty-six-to-sixty"><input id="forty-six-to-sixty" 
-        type="checkbox" name="tutor-rates" value="forty-six-to-sixty">
+        type="radio" name="tutor-rates" value="forty-six-to-sixty">
         $46-$60/hour </label>
       </p>
 
