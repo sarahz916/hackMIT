@@ -15,18 +15,77 @@
   
  
   <body>
+ <div class="container">
+  <div class="jumbotron container-fluid">
+    <h1>Join the Program</h1>
+    <p>Enter your information below to find compatible tutors and other students with common interests.</p>
+  </div>
     <div id="content" >
     <form action="/student" method="POST">
+      <!-- Student input information:
+      Required:
+      - Name (text box)
+      - meeting medium (checkboxes for virtual and in-person)
+      - Location (text box: have prompt say N/A if you only want virtual learning)
+      - Time Zone (radio buttons?  not comprehensive yet but that's fine)
+      - Subjects for help
+      - number of students willing to work with (check boxes 1-5, 5+)
+      - Upper limit for tutor rates
+
+      Optional:
+      - Bio (set word limit?)
+       -->
 
       <p>Name :</p>
-      <input type="text" id="name" name="name"><br>
-      <p>Comment :</p>
-      <textarea name="text-input"></textarea>
+      <input type="text" id="name" name="name"><br> <br>
+
+      <p> Over which mediums would you like to meet? <br>
+      <label for="virtual"><input id="virtual" 
+        type="checkbox" name="meeting-medium" value="virtual">
+        Virtual</label>
+      <label for="in-person"><input id="in-person" 
+        type="checkbox" name="meeting-medium" value="in-person">
+        In-person</label>
+      </p>
+
+      <p>Location :</p>
+      <textarea name="text-input" placeholder="Los Angeles, CA"></textarea>
+      <br/>
+
+      <p> Time Zone : <br>
+      <label for="HST"><input id="HST" 
+        type="radio" name="time-zone" value="HST">
+        HST</label>
+      <label for="AKST"><input id="AKST" 
+        type="radio" name="time-zone" value="AKST">
+        AKST</label>
+      <label for="PST"><input id="PST" 
+        type="radio" name="time-zone" value="PST">
+        PST</label>
+      <label for="MST"><input id="MST" 
+        type="radio" name="time-zone" value="MST">
+        MST</label>
+      <label for="CST"><input id="CST" 
+        type="radio" name="time-zone" value="CST">
+        CST</label>
+      <label for="EST"><input id="EST" 
+        type="radio" name="time-zone" value="EST">
+        EST</label>
+      </p>
+
+      <p>Tutoring Subjects :</p>
+      <textarea name="text-input" placeholder="Calculus, Biology, etc." rows="2" cols="30"></textarea>
+      <br/>
+      <input type="submit" />
+
+      <p>Short Bio :</p>
+      <textarea name="text-input" placeholder="I'm looking for a patient tutor that can explain coding to a beginner.  I prefer virtual meetings, but can meet in-person if necessary." rows="4" cols="50"></textarea>
       <br/>
       <input type="submit" />
 
       
     </form>
+  </div>
   </div>
   </body>
 </html>
