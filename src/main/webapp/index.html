@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head> <!--TODO: MAKE THIS AN APPEALING FRONT PAGE! -->
+    <meta charset="UTF-8">
+    <title>Sarah Zou's STEP Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+  <!-- Would be nice to be able to synchronize navbar accross all html files and not have to state it every time. -->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.html">Sarah Zou</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html"> Welcome <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="intro.html"> Introduction </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="resume.html"> Resume </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="travels.html"> Travel </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html"> Contact </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="sentimentanalysis.html"> SA </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/userapi"> Login </a>
+      </li>
+      </ul>
+  </div>
+</nav>
+  <body onload="getComments()">
+    <div id="content" >
+      <h1>Sarah Zou's Portfolio</h1>
+      <p> Welcome to my 2020 Google STEP Intern portfolio! </p>
+
+      <h2> Random Welcome Message </h2>
+      <p>Click here to get a random message:</p>
+      <button onclick="addRandomGreeting()"> Hello </button>
+      <div id="greeting-container"></div>
+    
+      
+
+      <h2> Links to Pages </h2>
+      <ul> 
+          <li><a href="intro.html"> Introduction </a> </li>
+          <li><a href="resume.html"> Resume </a> </li>
+          <li><a href="travels.html"> Travels </a> </li>
+          <li><a href="contact.html"> Contact Info </a> </li>
+          
+      </ul>
+    
+    
+    <h2>Comments</h2>
+
+    <form action="/data" method="POST">
+
+      <p>Enter a comment:</p>
+      <textarea name="text-input"></textarea>
+      <br/>
+      <input type="submit" />
+
+      
+    </form>
+
+    <form id = "maxcom">
+      <!-- TODO (@zous): could make drop down for newest or oldest comments first. -->
+      <!-- TODO (@zous): can add checkbox for view all-->
+      <p>Enter number of comments you wish to view:</p>
+      <input type="number" name="max-comments" defaultValue = "3">
+      <br/>
+      <input type = "button" onclick = "getComments()" value = "Submit"/>
+      <br/>
+    </form>
+    
+    <h2> Submitted Comments </h2>
+    <p> Positive sentiment is scored in the range (0, 1) with scores closer to 1 as more positive. 
+        <br> Negative sentiment is scored in the range (-1, 0) with scores closer to -1 as more negative.
+        <br> Scores closer to 0 are more neutral </p>
+     <ul id="Comments"></ul> 
+     <!-- TODO (@zous): make div and then make seperate boxes of p
+      to look more like comments -->
+    <!-- TODO (@zous): only display comments when a user is logged in -->
+      
+    <form >
+    <button onclick="deleteComments()"> Delete </button>
+    </form>
+  </div>
+  </body>
+</html>
