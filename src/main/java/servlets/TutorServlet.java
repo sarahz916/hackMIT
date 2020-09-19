@@ -1,5 +1,3 @@
-package servlets;
-
 import com.google.appengine.api.datastore.*;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
@@ -10,47 +8,46 @@ import java.util.ArrayList;
 import java.util.List;
 import com.google.gson.Gson;
 
-/** Servlet that returns comment data */
+/** Servlet that returns Tutor data */
 @WebServlet("/tutor")
 public class TutorServlet extends HttpServlet {
      
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
      
-    //int maxComments = getNumDisplayComments(request);
-     // Retrieves comment data from datastore. 
-     // Displays most recent comments first.
-    Query query = new Query("Comment");
+    //int maxTutors = getNumDisplayTutors(request);
+     // Retrieves Tutor data from datastore. 
+     // Displays most recent Tutors first.
+    Query query = new Query("Tutor");
 
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     PreparedQuery results = datastore.prepare(query);
-
-    // Create arraylist of string to store comments.
-    ArrayList<String> comments = new ArrayList<>();
+    //create a tutor data class?
+    // Create arraylist of string to store Tutors.
+    ArrayList<String> tutors = new ArrayList<>();
     for (Entity entity : results.asList(FetchOptions.Builder.withLimit(10))) {
       String name = (String) entity.getProperty("name");
       String text = (String) entity.getProperty("text");
-      comments.add(name + ": " + text + "\n");  
+      tutors.add(name + ": " + text + "\n");  
     }
 
     Gson gson = new Gson();
 
     response.setContentType("application/json;");
-    response.getWriter().println(gson.toJson(comments));
+    response.getWriter().println(gson.toJson(tutors));
   }
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    
+    //enumeration name and value into datastore
     String name = request.getParameter("name");
     String text = request.getParameter("text-input");
     long timestamp = System.currentTimeMillis();
-    Entity CommentEntity = new Entity("Comment");
-    CommentEntity.setProperty("name", name);
-    CommentEntity.setProperty("text", text);
-    CommentEntity.setProperty("timestamp", timestamp);
+    Entity TutorEntity = new Entity("Tutor");
+    TutorEntity.setProperty("name", name);
+    TutorEntity.setProperty("text", text);
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-    datastore.put(CommentEntity);
+    datastore.put(TutorEntity);
     response.sendRedirect("/index.html");
   }
 
