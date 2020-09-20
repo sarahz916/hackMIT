@@ -7,3 +7,5 @@ command:
 ```bash
 mvn package appengine:run
 ```
+
+Deployed at https://midyear-forest-274605.uc.r.appspot.com/
