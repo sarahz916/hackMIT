@@ -15,9 +15,52 @@
   
  
   <body>
+ <!-- Navigation Bar-->
+<<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+  <img src="image/stretch-pea.jpg" width="60" height="60" class="d-inline-block align-top" alt="">
+  <p style="font-size: 2em; display: inline;"> TutorPod </p>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          View Participants
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="tutor_display.html">View Tutors</a>
+          <a class="dropdown-item" href="similarstudents.html">View Students</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Join the Program
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Join as a Tutor <span class="sr-only">(current)</span></a>
+          <a class="dropdown-item" href="student.html">Join as a Student</a>
+        </div>
+      </li>
+
+      <li class="nav-item active">
+        <a target="_blank" class="nav-link" href="/userapi">Log in </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Sign up-->   
  <div class="container">
   <div class="jumbotron container-fluid">
-    <h1>Join the Program</h1>
+    <h1>Tutor Sign Up</h1>
     <p>Enter your information below to be matched with compatible students.</p>
   </div>
     <div id="content" >
@@ -111,7 +154,7 @@
       </p>
 
       <p>Short Bio :</p>
-      <textarea name="bio" placeholder="I'm looking for a patient tutor that can explain coding to a beginner.  I prefer virtual meetings, but can meet in-person if necessary." rows="4" cols="50"></textarea>
+      <textarea name="bio" placeholder="I'm a college student majoring in Literature.  I can articulate my thoughts well through remote media." rows="4" cols="50"></textarea>
       <br/>
       <input type="submit" />
 
