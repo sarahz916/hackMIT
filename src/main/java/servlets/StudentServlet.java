@@ -13,9 +13,9 @@ import org.json.JSONObject;
 /** Servlet that returns comment data */
 @WebServlet("/student")
 public class StudentServlet extends HttpServlet {
-    private final String[] STUDENT_FIELDS = {"name", "email", "meetingmedium", "location", "timezone", "subjects", "numstudents", "tutorrates", "bio"};
-    private final String[] TUTOR_FIELDS = {"name", "email", "meetingmedium", "location", "timezone", "subjects", "numstudents", "tutorrates", "bio"};
-    private final String[] FILTER_FIELDS = {"name", "email", "meetingmedium", "location", "timezone", "subjects", "numstudents", "tutorrates", "bio"};
+    private final String[] STUDENT_FIELDS = {"name", "email", "meetingmedium", "location", "time-zone", "subjects", "num-students", "tutor-rates", "bio"};
+    private final String[] TUTOR_FIELDS = {"name", "email", "meetingmedium", "location", "time-zone", "subjects", "num-students", "tutor-rates", "bio"};
+    private final String[] FILTER_FIELDS = {"name", "email", "meetingmedium", "location", "time-zone", "subjects", "num-students", "tutor-rates", "bio"};
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
