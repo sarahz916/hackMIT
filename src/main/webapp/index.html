@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Required meta tags (that I am not including oops)
+    <!-- Required meta tags 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	-->
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<title> Learning Together</title>
+	<title> TutorPod</title>
 </head>
 <body>
 
-<h1 class="text-center">Learning Together</h1>
 
-<!-- Button Bar-->
-<div class="btn-group" role="group">
-	<div class="btn-group" role="group">
-	  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-	   View Participants
-	  </button>
-	  <div class="dropdown-menu">
-	    <a class="dropdown-item" href="tutor_display.html">View Tutors</a>
-	    <a class="dropdown-item" href="similarstudents.html">View Other Students</a>
-	  </div>
-	</div>
+<!-- Navigation Bar-->
+<<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+  <img src="image/stretch-pea.jpg" width="60" height="60" class="d-inline-block align-top" alt="">
+  <p style="font-size: 2em; display: inline;"> TutorPod </p>
+	</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
 
-	<div class="btn-group" role="group">
-	  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-	    Join the Program
-	  </button>
-	  <div class="dropdown-menu">
-	    <a class="dropdown-item" href="tutor.html">Join as a Tutor</a>
-	    <a class="dropdown-item" href="student.html">Join as a Student</a>
-	  </div>
-	</div>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          View Participants
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="tutor_display.html">View Tutors</a>
+          <a class="dropdown-item" href="similarstudents.html">View Students</a>
+        </div>
+      </li>
 
-	<a target="_blank" href="/userapi">
-		<button type="button" class="btn btn-primary">Log in</button>
-	</a>		
-</div>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Join the Program
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="tutor.html">Join as a Tutor</a>
+          <a class="dropdown-item" href="student.html">Join as a Student</a>
+        </div>
+      </li>
+
+      <li class="nav-item active">
+        <a target="_blank" class="nav-link" href="/userapi">Log in </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 
 <!-- homepage image-->
 <div class="container-fluid">
