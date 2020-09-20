@@ -65,10 +65,12 @@ body {
 
 
  <div class="container">
-  <div class="jumbotron container-fluid">
-    <h1>Student Sign Up</h1>
-    <p>Enter your information below to find compatible tutors and other students with common interests.</p>
-  </div>
+
+  <h1 class="display-3 text-center">Student Sign Up</h1>
+  <p class="lead text-center">
+    Enter your information below to find compatible tutors and other students with common interests.
+  </p>
+
     <div id="content" >
     <form action="/student" method="POST">
 
@@ -144,24 +146,24 @@ body {
       </p>
 
       <p> Preferred Tutor Rates: <br>
-      <label for="five-to-fifteen"><input id="five-to-fifteen" 
-        type="radio" name="tutor-rates" value="five-to-fifteen">
-        $5-$15/hour </label>
-      <label for="sixteen-to-thirty"><input id="sixteen-to-thirty" 
-        type="radio" name="tutor-rates" value="sixteen-to-thirty">
-        $16-$30/hour </label>
-      <label for="thirty-one-to-forty-five"><input id="thirty-one-to-forty-five" 
-        type="radio" name="tutor-rates" value="thirty-one-to-forty-five">
-        $31-$45/hour </label>
-      <label for="forty-six-to-sixty"><input id="forty-six-to-sixty" 
-        type="radio" name="tutor-rates" value="forty-six-to-sixty">
-        $46-$60/hour </label>
+      <label for="zero-to-ten"><input id="zero-to-ten" 
+        type="radio" name="tutor-rates" value="zero-to-ten">
+        $0-$10/hour </label>
+      <label for="eleven-to-twenty"><input id="eleven-to-twenty" 
+        type="radio" name="tutor-rates" value="eleven-to-twenty">
+        $11-$20/hour </label>
+      <label for="twenty-one-to-thirty"><input id="twenty-one-to-thirty" 
+        type="radio" name="tutor-rates" value="twenty-one-to-thirty">
+        $21-$30/hour </label>
+      <label for="thirty-one-to-forty"><input id="thirty-one-to-forty" 
+        type="radio" name="tutor-rates" value="thirty-one-to-forty">
+        $31-$40/hour </label>
       </p>
 
       <p>Short Bio :</p>
       <textarea name="bio" placeholder="I'm looking for a patient tutor that can explain coding to a beginner.  I prefer virtual meetings, but can meet in-person if necessary." rows="4" cols="50"></textarea>
       <br/>
-      <input type="submit" />
+     <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
 

@@ -61,12 +61,21 @@ body {
 </nav>
 
 <!-- Sign up-->   
- <div class="container">
+
+<!-- 
   <div class="jumbotron container-fluid">
     <h1>Tutor Sign Up</h1>
     <p>Enter your information below to be matched with compatible students.</p>
   </div>
+
+-->
+<div class="container">
+  <h1 class="display-3 text-center">Tutor Sign Up</h1>
+  <p class="lead text-center">
+    Enter your information below to be matched with compatible students.
+  </p>
     <div id="content" >
+
     <form action="/tutor" method="POST">
 
 
@@ -159,9 +168,7 @@ body {
       <p>Short Bio :</p>
       <textarea name="bio" placeholder="I'm a college student majoring in Literature.  I can articulate my thoughts well through remote media." rows="4" cols="50"></textarea>
       <br/>
-      <input type="submit" />
-
-      
+     <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
   </body>
