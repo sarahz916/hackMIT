@@ -18,3 +18,22 @@
   margin: auto;
 
 }
+
+#home-image {
+	opacity: 0.5;
+}
+
+#home-image:hover {
+	opacity: 1.0;
+}
+
+#home-title {
+	text-align: justify;
+}
+
+.centered {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%)
+}
