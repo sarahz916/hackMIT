@@ -1,5 +1,5 @@
 # TutorPod
-This directory Katie Chiu, Maggie Sui, and Sarah Zou's hackMIT project!
+This directory Katie Chiu, Maggie Sui, Aditi Venkatesh and Sarah Zou's hackMIT project!
 
 To run a local server, execute this
 command:
