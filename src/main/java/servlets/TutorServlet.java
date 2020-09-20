@@ -13,9 +13,10 @@ import org.json.JSONObject;
 /** Servlet that returns comment data */
 @WebServlet("/tutor")
 public class TutorServlet extends HttpServlet {
-    private final String[] STUDENT_FIELDS = {"name", "email", "meetingmedium", "location", "time-zone", "subjects", "num-students", "tutor-rates", "bio"};
-    private final String[] TUTOR_FIELDS = {"name", "email", "meetingmedium", "location", "time-zone", "subjects", "num-students", "tutor-rates", "bio"};
-    private final String[] FILTER_FIELDS = {"name", "email", "meetingmedium", "location", "time-zone", "subjects", "num-students", "tutor-rates", "bio"};
+    private final String[] STUDENT_FIELDS = {"name", "email", "meeting-medium", "location", "time-zone", "subjects", "num-students", "tutor-rates", "bio"};
+    private final String[] TUTOR_FIELDS = {"name", "email", "meeting-medium", "location", "time-zone", "subjects", "num-students", "tutor-rates", "bio"};
+    private final String[] FILTER_FIELDS = {"name", "email", "meeting-medium", "location", "time-zone", "subjects", "num-students", "tutor-rates", "bio"};
+    private final int NUM_OF_MATCHES = 3;
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
@@ -101,9 +102,13 @@ public class TutorServlet extends HttpServlet {
         for (int i = 0; i < tutorlist.size(); i ++){
             int check = 0;
             for (String prop: FILTER_FIELDS){
-                if (student.get(prop) == tutorlist.get(i).get(prop)){
+                if (student.get(prop).equals(tutorlist.get(i).get(prop))){
                     check ++;
                 }
+
+            }                
+            if (check >= NUM_OF_MATCHES){
+                    SimilarTutors.add(tutorlist.get(i));
             }
         }
         return SimilarTutors;
